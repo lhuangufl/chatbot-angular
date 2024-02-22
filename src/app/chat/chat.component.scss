@@ -1,0 +1,107 @@
+/* Chat container styling */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh; /* Adjust based on your preference */
+  max-width: 600px; /* Adjust based on your preference */
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Chat header styling */
+.chat-header {
+  background-color: #f2f4f6; /* Adjust the background color as needed */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+
+  .chat-logo {
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 15px; /* Add some space between the logo and the title */
+  }
+}
+
+/* Chat window styling */
+.chat-window {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f8f8f8; /* Light gray background */
+}
+
+/* Message styling */
+.message-content {
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+  max-width: 70%;
+}
+
+/* Differentiating user and bot messages */
+.user-message {
+  background-color: #dcf8c6; /* Light green background for user messages */
+  margin-left: auto; /* Align user messages to the right */
+  text-align: right;
+}
+
+.bot-message {
+  background-color: #eaeaea; /* Light gray background for bot messages */
+  text-align: left;
+}
+
+/* Chat input styling */
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background-color: #f2f2f2; /* Lighter gray background */
+
+  input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Primary color */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3; /* Darker primary color */
+    }
+  }
+}
+
+/* Scrollbar (optional) for chat window */
+.chat-window::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.chat-window::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+}
+

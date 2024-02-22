@@ -1,10 +1,13 @@
-<div>
-  <h1>Deep Chat</h1>
-  <!-- demo/textInput are examples of passing an object directly into a property -->
-  <!-- initialMessages is an example of passing a data object into a property -->
-  <deep-chat
-    demo="true"
-    textInput='{"placeholder":{"text": "Welcome to the demo!"}}'
-    [initialMessages]="initialMessages"
-  ></deep-chat>
+
+<div class="app-container">
+  <app-sidebar></app-sidebar>
+  <main class="main-content">
+    <div class="main-content-header">
+    <div class="header-buttons">
+        <button class="chat-button">New Chat</button>
+        <button class="history-button">History</button>
+    </div>
+    </div>
+    <app-chat></app-chat> <!-- This line includes the ChatComponent in your app -->
+  </main>
 </div>

@@ -1,0 +1,14 @@
+<div class="chat-container">
+<div class="chat-header">
+  <img src="../assets/log.png" alt="Company Logo" class="chat-logo"> <!-- Add this line -->
+</div>
+  <div class="chat-window">
+    <div *ngFor="let message of messages" [ngClass]="{'user-message': message.sentBy === 'user', 'bot-message': message.sentBy === 'bot'}">
+      <div class="message-content">{{ message.content }}</div>
+    </div>
+  </div>
+  <div class="chat-input">
+    <input [(ngModel)]="newMessage" (keyup.enter)="sendMessage()" type="text" placeholder="How can I assist you?" />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>
