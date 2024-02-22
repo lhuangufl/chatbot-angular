@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import 'deep-chat';
+
 
 @Component({
   selector: 'app-root',
