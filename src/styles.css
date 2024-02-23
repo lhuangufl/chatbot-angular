@@ -17,3 +17,19 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
+.sidebar {
+    width: 250px; /* Or your desired sidebar width */
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto; /* Allows scrolling if content is longer than the screen */
+}
+
+/* Adjust the main content area so it's not covered by the sidebar */
+.router-outlet-container { /* You might need to add this class to your HTML or use an existing one */
+    margin-left: 250px; /* Same as sidebar width */
+    width: calc(100% - 250px); /* Subtract sidebar width from total width */
+    height: 100vh;
+    overflow-y: auto; /* Allows scrolling */
+}
