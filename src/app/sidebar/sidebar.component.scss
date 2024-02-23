@@ -19,8 +19,38 @@
     font-size: 24px; // Adjust based on your preference
     font-weight: bold;
     border-bottom: 1px solid #242427; // Adds a subtle border
+    position: relative; // Ensure the header is also positioned relatively
+        .toggle-btn {
+            position: absolute;
+            top: 10px; // Adjust as needed
+            right: 10px; // Adjust as needed
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px; // Width of the hamburger icon
+            height: 25px; // Height of the hamburger icon
+            background: transparent;
+            border: none;
+            cursor: pointer;
+
+            .bar {
+                height: 3px; // Thickness of each bar
+                width: 100%; // Make bars extend full width of button
+                background-color: #fff; // Color of the bars
+                border-radius: 2px;
+                transition: all 0.3s ease;
+            }
+        }
   }
 
+  &.is-collapsed {
+    width: 50px; // Collapsed state width
+
+    .sidebar-header h2,
+    .nav-links {
+      display: none; // Hide text when collapsed
+    }
+  }
   .nav-links {
     list-style: none;
     padding: 0;
@@ -38,6 +68,11 @@
         text-decoration: none;
         color: #091115; // Light grey color for links, change as needed
         font-size: 16px; // Adjust based on your preference
+        i { // Icon styles
+        margin-right: 10px; // Space between icon and text
+        min-width: 20px; // Ensure icons align even if sidebar collapses
+        }
+
 
         &:hover {
           color: #FFFFFF; // White color on hover
@@ -45,4 +80,21 @@
       }
     }
   }
+
+}
+.sidebar.is-collapsed {
+        .nav-links {
+        li a {
+        justify-content: center; // Center icons when sidebar is collapsed
+
+        .text {
+                opacity: 0; // Hide text when sidebar is collapsed
+                pointer-events: none; // Avoid text being clickable when invisible
+        }
+        }
+
+        li:hover a .text {
+        opacity: 1; // Reveal text on hover
+        }
+        }
 }
