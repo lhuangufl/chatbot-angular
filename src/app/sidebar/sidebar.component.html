@@ -1,18 +1,16 @@
 <div class="sidebar" [ngClass]="{'is-collapsed': isCollapsed}">
-  <div class="sidebar-header">
-    <h2>GENIUS</h2>
-        <button class="toggle-btn" (click)="toggleSidebar()">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-  </div>
+
+<section class="sidebar_logo_section">
+    <img src="../assets/square_logo.png" alt="Logo" class="sidebar-logo">
+    <h1 class="sidebar-title">GENIUS</h1>
+</section>
   <ul class="nav-links">
-    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Overview</a></li>
+    <li routerLinkActive="inactive" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Overview</a></li>
     <li routerLinkActive="active"><a routerLink="/dashboard"><i class="fa fa-home"></i>Dashboard</a></li>
     <li routerLinkActive="active"><a routerLink="/chat"><i class="fa fa-comments"></i>Genius Chat</a></li>
     <li routerLinkActive="active"><a routerLink="/hub"><i class="fa fa-cogs"></i>Genius Hub</a></li>
     <li routerLinkActive="active"><a routerLink="/query"><i class="fa fa-tools"></i>Genius Query</a></li>
+    <li routerLinkActive="inactive" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Customization</a></li>
     <li routerLinkActive="active"><a routerLink="/knowledge"><i class="fa fa-book"></i>Knowledge</a></li>
 
   </ul>

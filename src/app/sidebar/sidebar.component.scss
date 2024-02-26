@@ -4,43 +4,36 @@
   position: fixed;
   left: 0;
   top: 0;
-  background: #f3f2f1; // Dark blue background, change as needed
+  background: #ffffff; // Dark blue background, change as needed
   color: #fff;
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   z-index: 1000;
 
-  .sidebar-header {
-    background-color: #cbe0ea; // Slightly lighter blue for the header
-    color: #FFFFFF;
-    padding: 20px;
-    text-align: center;
-    font-size: 24px; // Adjust based on your preference
-    font-weight: bold;
-    border-bottom: 1px solid #242427; // Adds a subtle border
-    position: relative; // Ensure the header is also positioned relatively
-        .toggle-btn {
-            position: absolute;
-            top: 10px; // Adjust as needed
-            right: 10px; // Adjust as needed
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 30px; // Width of the hamburger icon
-            height: 25px; // Height of the hamburger icon
-            background: transparent;
-            border: none;
-            cursor: pointer;
+  .sidebar_logo_section {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  .sidebar-logo {
+    width: 50px;
+    height: auto;
+    padding-left: 15px;
+  }
+  .sidebar-title {
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #0a0a0a;
+    font-weight: 500;
+    line-height: 143%;
 
-            .bar {
-                height: 3px; // Thickness of each bar
-                width: 100%; // Make bars extend full width of button
-                background-color: #fff; // Color of the bars
-                border-radius: 2px;
-                transition: all 0.3s ease;
-            }
-        }
   }
 
   &.is-collapsed {

@@ -11,8 +11,14 @@ import { RouterModule } from '@angular/router';
 })
 export class SidebarComponent {
   isCollapsed = false; // Tracks the collapsed state
+  showChildSidebar = false;
 
   toggleSidebar(): void {
     this.isCollapsed = !this.isCollapsed; // Toggle the state
+  }
+
+
+  toggleChildSidebar(): void {
+    this.showChildSidebar = !this.showChildSidebar;
   }
 }
