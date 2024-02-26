@@ -1,18 +1,16 @@
-<div class="hub-icons">
-  <div class="icon-container">
-    <i class="fas fa-network-wired fa-5x"></i>
-    <p>Network</p>
-  </div>
-  <div class="icon-container">
-    <i class="fas fa-users fa-5x"></i>
-    <p>Teams</p>
-  </div>
-  <div class="icon-container">
-    <i class="fas fa-briefcase fa-5x"></i>
-    <p>Projects</p>
-  </div>
-  <div class="icon-container">
-    <i class="fas fa-headset fa-5x"></i>
-    <p>Support</p>
-  </div>
+<div class = "hubCenter">
+  <section class="search-form">
+    <form>
+      <input type="text" placeholder="Filter by author">
+      <input type="text" placeholder="Filter by name">
+      <input type="text" placeholder="Filter by type">
+    </form>
+  </section>
+  <section class="results">
+    <app-agent
+      *ngFor="let housingLocation of housingLocationList"
+      [housingLocation]="housingLocation">
+    </app-agent>
+  </section>
+
 </div>

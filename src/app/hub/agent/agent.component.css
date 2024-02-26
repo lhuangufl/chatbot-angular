@@ -1,0 +1,56 @@
+.listing {
+  background: var(--accent-color);
+  border-radius: 30px;
+  padding-bottom: 30px;
+  position: relative; /* Ensure this is here to act as the positioning context for .start-chat-btn */
+  overflow: hidden; /* Ensures no content leaks outside the border-radius */
+}
+
+.listing-heading {
+  color: var(--primary-color);
+  padding: 10px 20px 0 20px;
+}
+
+.listing-photo {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px 30px 0 0;
+}
+
+.listing-location {
+  padding: 10px 20px 20px 20px;
+}
+
+.listing-location::before {
+  content: url("/assets/location-pin.svg");
+  margin-right: 5px; /* Ensures a little space between the icon and the text */
+  vertical-align: middle; /* Aligns the icon with the text */
+}
+
+section.listing a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+section.listing a::after {
+  content: "\203A";
+  margin-left: 5px;
+}
+
+.start-chat-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #637fcb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.start-chat-btn:hover {
+  background-color: #0056b3;
+}
