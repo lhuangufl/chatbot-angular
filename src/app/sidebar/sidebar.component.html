@@ -5,13 +5,13 @@
     <h1 class="sidebar-title">GENIUS</h1>
 </section>
   <ul class="nav-links">
-    <li routerLinkActive="inactive" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Overview</a></li>
-    <li routerLinkActive="active"><a routerLink="/dashboard"><i class="fa fa-home"></i>Dashboard</a></li>
-    <li routerLinkActive="active"><a routerLink="/chat"><i class="fa fa-comments"></i>Genius Chat</a></li>
-    <li routerLinkActive="active"><a routerLink="/hub"><i class="fa fa-cogs"></i>Genius Hub</a></li>
-    <li routerLinkActive="active"><a routerLink="/query"><i class="fa fa-tools"></i>Genius Query</a></li>
-    <li routerLinkActive="inactive" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Customization</a></li>
-    <li routerLinkActive="active"><a routerLink="/knowledge"><i class="fa fa-book"></i>Knowledge</a></li>
+    <li (click)="toggleChildSidebar()" routerLinkActive="inactive" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Overview</a></li>
+    <li (click)="toggleChildSidebar()" routerLinkActive="active"><a routerLink="/dashboard"><i class="fa fa-home"></i>Dashboard</a></li>
+    <li (click)="toggleChildSidebar()" routerLinkActive="active"><a routerLink="/chat"><i class="fa fa-comments"></i>Genius Chat</a></li>
+    <li (click)="toggleChildSidebar()" routerLinkActive="active"><a routerLink="/hub"><i class="fa fa-cogs"></i>Genius Hub</a></li>
+    <li (click)="toggleChildSidebar()" routerLinkActive="active"><a routerLink="/query"><i class="fa fa-tools"></i>Genius Query</a></li>
+    <li (click)="toggleChildSidebar()" routerLinkActive="inactive" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Customization</a></li>
+    <li (click)="toggleChildSidebar()" routerLinkActive="active"><a routerLink="/knowledge"><i class="fa fa-book"></i>Knowledge</a></li>
 
   </ul>
 </div>

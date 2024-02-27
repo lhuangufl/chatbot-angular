@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildsidebarComponent } from './childsidebar.component';
+import { ChildSidebarComponent } from './childsidebar.component';
 
-describe('ChildsidebarComponent', () => {
-  let component: ChildsidebarComponent;
-  let fixture: ComponentFixture<ChildsidebarComponent>;
+describe('ChildSidebarComponent', () => {
+  let component: ChildSidebarComponent;
+  let fixture: ComponentFixture<ChildSidebarComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ChildsidebarComponent]
+      imports: [ChildSidebarComponent]
     });
-    fixture = TestBed.createComponent(ChildsidebarComponent);
+    fixture = TestBed.createComponent(ChildSidebarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

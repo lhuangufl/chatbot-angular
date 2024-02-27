@@ -13,10 +13,10 @@ import { AgentComponent } from './agent/agent.component';
   styleUrls: ['./hub.component.css']
 })
 export class HubComponent {
-  housingLocationList: Agent[] = [];
+  agentList: Agent[] = [];
   hubService: HubService = inject(HubService);
 
   constructor() {
-    this.housingLocationList = this.hubService.getAllHousingLocations();
+    this.agentList = this.hubService.getAllAgents();
   }
 }

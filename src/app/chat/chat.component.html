@@ -7,8 +7,34 @@
       <div class="message-content">{{ message.content }}</div>
     </div>
   </div>
-  <div class="chat-input">
-    <input [(ngModel)]="newMessage" (keyup.enter)="sendMessage()" type="text" placeholder="How can I assist you?" />
-    <button (click)="sendMessage()">Send</button>
+  <section>
+    <div class="chat-input">
+      <input [(ngModel)]="newMessage" (keyup.enter)="sendMessage()" type="text" placeholder="How can I assist you?" />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+      <div class="card-images">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c0e82f7daf7ab2a0e1c0c8ffb28ed200b19685708380cce7d8ebf4f6b1d8ba14?apiKey=2296af8a53ed4cceba6d1d7ccdada8d3&" alt="" class="decorative-img" />
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f1f4b19af9ba9cce71dd34bbbdfa628b0e3c6d6a1757167df3e633f15a458e5?apiKey=2296af8a53ed4cceba6d1d7ccdada8d3&" alt="" class="decorative-img" />
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e8034d5fdfd2a17270b2c82e64f723c76d86358385d302dded6aba4e8292171e?apiKey=2296af8a53ed4cceba6d1d7ccdada8d3&" alt="" class="decorative-img" />
+      </div>
+  </section>
+
+
+
+  <div class="chat-footer">
+    <select [(ngModel)]="selectedKnowledgeBase" (change)="onKnowledgeBaseChange()">
+      <!-- This option is a placeholder and should not be reselectable -->
+      <option value="" disabled>Select a Knowledge Base</option>
+      <!-- Your options -->
+      <option *ngFor="let kb of knowledgeBases" [ngValue]="kb.id">{{ kb.name }}</option>
+    </select>
+    <select [(ngModel)]="selectedWebSearch" (change)="onWebSearchChange()">
+      <!-- This option is a placeholder and should not be reselectable -->
+      <option value="" disabled>Select Web Search Option</option>
+      <!-- Your predefined options -->
+      <option value="google">Google</option>
+      <option value="bing">Bing</option>
+      <option value="duckduckgo">DuckDuckGo</option>
+    </select>
   </div>
 </div>

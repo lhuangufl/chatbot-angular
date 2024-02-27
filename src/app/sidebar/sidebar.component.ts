@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { SidebarService } from './sidebar.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,6 +13,7 @@ import { RouterModule } from '@angular/router';
 export class SidebarComponent {
   isCollapsed = false; // Tracks the collapsed state
   showChildSidebar = false;
+  constructor(private sidebarService: SidebarService) {}
 
   toggleSidebar(): void {
     this.isCollapsed = !this.isCollapsed; // Toggle the state
@@ -19,6 +21,6 @@ export class SidebarComponent {
 
 
   toggleChildSidebar(): void {
-    this.showChildSidebar = !this.showChildSidebar;
+    this.sidebarService.toggleChildSidebar();
   }
 }

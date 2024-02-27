@@ -1,10 +1,7 @@
 export interface Agent {
   id: number;
   name: string;
-  city: string;
-  state: string;
+  description: string;
+  author: string;
   photo: string;
-  availableUnits: number;
-  wifi: boolean;
-  laundry: boolean;
 }

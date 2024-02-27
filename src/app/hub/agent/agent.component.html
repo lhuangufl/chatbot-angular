@@ -1,8 +1,8 @@
-    <section class="listing">
-      <div class="listing-content">
-        <img class="listing-photo" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}">
-        <h2 class="listing-heading">{{ housingLocation.name }}</h2>
-        <p class="listing-location">{{ housingLocation.city}}, {{housingLocation.state }}</p>
-      </div>
-      <button routerLink="/chat" class="start-chat-btn">Start Chat</button>
-    </section>
+<section class="agent">
+    <div class="agent-content">
+        <img class="agent-photo" [src]="agent.photo" alt="Exterior photo of {{agent.name}}">
+        <h2 class="agent-heading">{{ agent.name }}</h2>
+        <p class="agent-description">{{ agent.description}}, {{agent.author }}</p>
+    </div>
+    <button (click)="startChat(agent)" class="start-chat-btn">Start Chat</button>
+</section>

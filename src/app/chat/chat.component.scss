@@ -105,3 +105,36 @@
   padding: 20px;
 }
 
+
+.chat-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #fbdcdc; /* Light grey background */
+}
+
+.chat-footer select {
+  padding: 5px 15px;
+  border-radius: 15px; /* More pronounced rounded corners for the dropdowns */
+  border: 1px solid #ccc; /* Light grey border */
+  background-color: #fff; /* White background */
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  appearance: none; /* Remove default styling */
+  // background-image: url('../assets/dropdown-icon.png'); /* Replace with your dropdown icon */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Adjust based on your icon size */
+  background-size: 12px; /* Adjust based on your icon size */
+}
+
+/* Style for the search and knowledge base icons */
+.chat-footer .icon {
+  margin-right: 10px;
+}
+
+/* Additional styling for individual dropdowns if needed */
+.chat-footer .web-search-select,
+.chat-footer .knowledge-base-select {
+  flex: 1; /* Take up equal space */
+}
+
