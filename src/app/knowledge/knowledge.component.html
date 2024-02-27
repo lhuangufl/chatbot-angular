@@ -1,23 +1,30 @@
 <div class="knowledge-bases">
-
+    <div class="tabs">
+        <a class="tab" [class.active]="activeTab === 'knowledgeBases'" (click)="activeTab = 'knowledgeBases'">Knowledge bases</a>
+        <a class="tab" [class.active]="activeTab === 'uploadHistory'" (click)="activeTab = 'uploadHistory'">Upload history</a>
+        <a class="tab" [class.active]="activeTab === 'explorePublic'" (click)="activeTab = 'explorePublic'">Explore public knowledge base</a>
+    </div>
     <section class="knowledge-content">
         <h2 class="section-title">Knowledge Bases</h2>
         <p class="section-description">Add knowledge sources to shape your knowledge base.</p>
-        <a class="learn-more-link" href="#">Learn how knowledge bases work &gt;</a>
+        <h2 class="div-22">Learn how knowledge bases work &gt;</h2>
 
         <div class="search-create-area">
             <div class="search-box">
                 <input type="search" id="searchKnowledgeBase" placeholder="Search for a knowledge base">
-                <label for="searchKnowledgeBase" class="visually-hidden">Search Knowledge Bases</label>
             </div>
-            <button class="create-btn">Create your knowledge base</button>
+            <button (click)="showModal()">Create your knowledge base</button>
+            <app-agent-modal *ngIf="isModalVisible" (close)="isModalVisible = false" (create)="addNewAgent($event)"></app-agent-modal>
         </div>
 
-        <p class="no-data-message">It seems like you have not created a knowledge base yet.</p>
 
-        <div class="pagination-controls">
-            <button class="pagination-btn">Previous</button>
-            <button class="pagination-btn">Next</button>
-        </div>
     </section>
+
 </div>
+<section class="results">
+    <app-agent
+    *ngFor="let agent of agentList"
+    [agent]="agent">
+    </app-agent>
+</section>
+

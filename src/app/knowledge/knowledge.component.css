@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    margin-bottom: 100px;
 }
 
 .knowledge-content {
@@ -80,4 +81,65 @@ input[type="search"] {
 
 .pagination-btn:hover {
     background-color: #e4e4e4;
+}
+
+
+
+.tabs {
+  display: flex;
+  background: #f0f0f0; /* Light grey background; adjust as needed */
+  border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+  overflow: hidden; /* Ensures that inner elements do not break the rounded corners */
+}
+
+.tab {
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #e0e0e0; /* Default background */
+  border: 1px solid #d0d0d0; /* Border for definition */
+  border-bottom: none; /* Remove bottom border */
+  margin-right: 2px; /* Small gap between tabs */
+  position: relative; /* For layering and positioning */
+  top: 1px; /* Slightly raise inactive tabs */
+  transition: background 0.3s, top 0.3s; /* Smooth transition for hover and active states */
+}
+
+.tab:hover,
+.tab.active {
+  background: #ffffff; /* Active or hovered tab is white */
+  top: 0; /* Active or hovered tab should stick to the top */
+}
+
+.tab.active {
+  font-weight: bold; /* Make active tab text bold */
+  z-index: 1; /* Ensure active tab overlaps inactive ones */
+}
+
+/* Remove right margin for the last tab */
+.tab:last-child {
+  margin-right: 0;
+}
+
+.div-22 {
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    text-decoration-line: underline;
+    background: linear-gradient(91deg, #ff805f 0%, #b74dd4 47%, #0379ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.results {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+  margin-left: 300px;
 }

@@ -1,0 +1,35 @@
+<div class="modal-background">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>Create New Agent</h2>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="agentName">Name:</label>
+          <input type="text" id="agentName" [(ngModel)]="newAgent.name" name="name" class="form-control" placeholder="Enter agent name">
+        </div>
+
+        <div class="form-group">
+          <label for="agentDescription">Description:</label>
+          <textarea id="agentDescription" [(ngModel)]="newAgent.description" name="description" class="form-control" rows="3" placeholder="Enter description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="agentAuthor">Author:</label>
+          <input type="text" id="agentAuthor" [(ngModel)]="newAgent.author" name="author" class="form-control" placeholder="Enter author name">
+        </div>
+
+        <div class="form-group">
+          <label for="agentPhoto">Photo URL:</label>
+          <input type="text" id="agentPhoto" [(ngModel)]="newAgent.photo" name="photo" class="form-control" placeholder="Enter photo URL">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" (click)="closeModal()">Cancel</button>
+      <button type="button" class="btn btn-primary" (click)="createAgent()">Create</button>
+
+    </div>
+  </div>
+</div>
